@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    {% for message in get_flashed_messages() %}
+        <p>{{message}}</p>
+    {% endfor %}
+    
+    <!-- Login -->
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        <!-- Email -->
+        <label for="email">Email: </label>
+        <input type="text" name="email">
+        <br>
+
+        <!-- Password -->
+        <label for="password">Password: </label>
+        <input type="password" name="password">
+        <br>
+
+        <!-- Submit -->
+        <button>Submit</button>
+    </form>
+
+
+    <!-- Register -->
+    <h2>Register</h2>
+    <form action="/register" method="POST">
+        <!-- First Name -->
+        <label>First Name: </label>
+        <input type="text" name="first_name">
+        <br>
+
+        <!-- Last Name -->
+        <label>Last Name: </label>
+        <input type="text" name="last_name">
+        <br>
+
+        <!-- Email -->
+        <label>Email: </label>
+        <input type="text" name="email">
+        <br>
+
+        <!-- Password -->
+        <label>Password: </label>
+        <input type="password" name="password">
+        <br>
+
+        <!-- Confirm Password -->
+        <label>Confirm Password: </label>
+        <input type="password" name="confirm_password">
+        <br>
+
+        <!-- Birthday -->
+        <label>Birthday: </label>
+        <input type="date" name="birthday" required>
+        <br>
+
+        <!-- Account Type -->
+        <label>Account Type: </label>
+        <input type="radio" name="account_type" id="student" value="student" checked>
+        <label for="student">Student</label>
+        <input type="radio" name="account_type" id="teacher" value="teacher">
+        <label for="teacher">Teacher</label>
+        <br>
+
+        <!-- Submit -->
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html>
